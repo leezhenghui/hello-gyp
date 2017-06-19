@@ -1,7 +1,7 @@
 all: ./build ./helloworld
 
 ./build:
-	gyp helloworld.gyp --depth=. -f make --generator-output=./build
+	./tools/gyp/gyp helloworld.gyp --depth=. -f make --generator-output=./build
 
 ./helloworld:
 	make helloworld -C ./build V=1
